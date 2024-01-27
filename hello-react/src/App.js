@@ -1,15 +1,8 @@
-import React from "react";
-import './App.css';
+import React, { Component } from 'react';
+import MyComponent from './MyComponent';
 
-function App() {
-  const name = '리엑트';
-
-  return (
-    <>
-      <div className="react">{name}</div>
-      <input/>
-    </>
-  );
-}
+const App = () => {
+  return <MyComponent />;
+};
 
 export default App;
