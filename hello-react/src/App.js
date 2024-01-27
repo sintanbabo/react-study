@@ -2,9 +2,14 @@ import React from "react";
 import './App.css';
 
 function App() {
-  const name = 'ㅁ';
+  const name = '리엑트';
 
-  return <div>{name||'리엑트'}</div>;
+  return (
+    <>
+      <div className="react">{name}</div>
+      <input/>
+    </>
+  );
 }
 
 export default App;
