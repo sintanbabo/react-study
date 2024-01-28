@@ -1,7 +1,26 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropsType from 'prop-types';
 
-const MyComponent = () => {
-  return <div>나의 멋진 새로운 컴포넌트</div>;
-};
+class MyComponent extends Component {
+  static defaultProps = {
+    name: '기본이름',
+  };
+  static PropsType = {
+    name: PropsType.string,
+    favoriteNumber: PropsType.number.isRequired,
+  };
+
+  render() {
+    const { name, favoriteNumber, children } = this.props;
+    return (
+      <div>
+        안녕하세요, 제 이름은 {name} 입니다. <br />
+        children 값은 {children}
+        입니다. <br />
+        제가 좋아하는 숫자는 {favoriteNumber} 입니다.
+      </div>
+    );
+  }
+}
 
 export default MyComponent;

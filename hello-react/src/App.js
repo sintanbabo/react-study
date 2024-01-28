@@ -1,8 +1,11 @@
-import React, { Component } from 'react';
 import MyComponent from './MyComponent';
 
 const App = () => {
-  return <MyComponent />;
+  return (
+    <MyComponent name="React" favoriteNumber={3}>
+      리엑트
+    </MyComponent>
+  );
 };
 
 export default App;
